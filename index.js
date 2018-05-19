@@ -78,6 +78,7 @@ function makeWave() {
       nonDiagPower: inputNonDiagPower.value,
       allpassFeedback: 1 - inputAllpassFeedback.value,
       allpassMix: inputAllpassMix.value,
+      allpassHighpassFrequency: inputAllpassHighpassFrequency.value,
       fdnAttackTimeRatio: inputFdnAttackTimeRatio.value,
       fdnAttackMix: inputFdnAttackMix.value,
       fdnTickTimeRatio: inputFdnTickTimeRatio.value,
@@ -158,6 +159,7 @@ function random() {
     inputNonDiagPower.random()
     inputAllpassFeedback.random()
     inputAllpassMix.random()
+    inputAllpassHighpassFrequency.random()
     inputFdnAttackTimeRatio.random()
     inputFdnAttackMix.random()
     inputFdnTickTimeRatio.random()
@@ -253,6 +255,14 @@ var inputSeed = new KnobInput(divCymbalControls.element,
   "Time.Seed", 0, 0, Math.floor(Number.MAX_SAFE_INTEGER / 2), 1, refresh, false)
 var inputFdnReferenceDelayTime = new KnobInput(divCymbalControls.element,
   "FDN.Time", 0.16, 0.0001, 0.2, 0.0001, refresh, true)
+var inputFdnAttackTimeRatio = new KnobInput(divCymbalControls.element,
+  "Atk.Time", 0.2, 0.0001, 1, 0.0001, refresh, true)
+var inputFdnAttackMix = new KnobInput(divCymbalControls.element,
+  "Atk.Mix", 0.01, 0, 0.1, 0.0001, refresh, true)
+var inputFdnTickTimeRatio = new KnobInput(divCymbalControls.element,
+  "Tick.Time", 0.1, 0.0001, 1, 0.0001, refresh, true)
+var inputFdnTickMix = new KnobInput(divCymbalControls.element,
+  "Tick.Mix", 0.2, 0, 1, 0.0001, refresh, true)
 var inputFdnFeedback = new KnobInput(divCymbalControls.element,
   "FDN.Feedback", 0.02, 0, 16, 0.0001, refresh, false)
 var inputFdnCascadeMix = new KnobInput(divCymbalControls.element,
@@ -265,14 +275,8 @@ var inputAllpassFeedback = new KnobInput(divCymbalControls.element,
   "AP.Feedback", 0.01, 0.0001, 1, 0.0001, refresh, false)
 var inputAllpassMix = new KnobInput(divCymbalControls.element,
   "AP.Mix", 2 / 3, 0, 1, 0.001, refresh, false)
-var inputFdnAttackTimeRatio = new KnobInput(divCymbalControls.element,
-  "Atk.Time", 0.2, 0.0001, 1, 0.0001, refresh, true)
-var inputFdnAttackMix = new KnobInput(divCymbalControls.element,
-  "Atk.Mix", 0.01, 0, 0.1, 0.0001, refresh, true)
-var inputFdnTickTimeRatio = new KnobInput(divCymbalControls.element,
-  "Tick.Time", 0.1, 0.0001, 1, 0.0001, refresh, true)
-var inputFdnTickMix = new KnobInput(divCymbalControls.element,
-  "Tick.Mix", 0.2, 0, 1, 0.0001, refresh, true)
+var inputAllpassHighpassFrequency = new KnobInput(divCymbalControls.element,
+  "AP.HP.Freq", 20, 1, 200, 0.001, refresh, true)
 var inputFdnFilterSeed = new KnobInput(divCymbalControls.element,
   "FDN.Flt.Seed", 0, 0, Math.floor(Number.MAX_SAFE_INTEGER / 2), 1, refresh, false)
 var inputFdnMaxFilterGain = new KnobInput(divCymbalControls.element,

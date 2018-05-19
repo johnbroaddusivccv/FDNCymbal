@@ -182,7 +182,8 @@ onmessage = (event) => {
       })
     }
     var allpass = new SerialAllpass(sampleRate, allpassParams)
-    var allpassHighPass = new Biquad(sampleRate, "highpass", 100, 0.01, 0) // fc params?
+    var allpassHighPass = new Biquad(
+      sampleRate, "highpass", params.allpassHighpassFrequency, 0.01, 0)
     var allpassLowShelf = new Biquad(sampleRate, "lowshelf", 1200, 0.01, -6)
 
     var allpassFeedback = 0
