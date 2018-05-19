@@ -426,6 +426,13 @@ class KnobInput {
     this.canvas.addEventListener(
       "mouseup", (event) => this.onMouseUp(event), false)
 
+    this.canvas.addEventListener(
+      "touchstart", (event) => this.onMouseDown(event), false)
+    this.canvas.addEventListener(
+      "touchmove", (event) => this.onMouseMove(event), false)
+    this.canvas.addEventListener(
+      "touchend", (event) => this.onMouseUp(event), false)
+
     this.number.addEventListener(
       "change", (event) => this.onInput(event), false)
 
