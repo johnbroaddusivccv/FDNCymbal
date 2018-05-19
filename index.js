@@ -194,6 +194,7 @@ description.add("", "Randomボタンの隣のプルダウンメニューでラ�
 description.add("", "Saveボタンで気に入った音を保存できます。")
 description.add("", "QuickSaveにチェックを入れると音を再生するたびに音が保存されます。")
 description.add("ヒント", "発散するときはFDN.Feedbackを0にしてFDN.Flt.Gainの値を下げてみてください。")
+description.add("", "音量が波打つときはFDN.Cas.Mixの値を下げてみてください。")
 
 var divWaveform = new Div(divMain.element, "waveform")
 var headingWaveform = new Heading(divWaveform.element, 6, "Waveform")
