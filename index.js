@@ -221,7 +221,7 @@ var divControlLeft = new Div(divMain.element, "controlLeft", "controlBlock")
 
 var divMiscControls = new Div(divControlLeft.element, "miscControls")
 var headingRender = new Heading(divMiscControls.element, 6, "Render Settings")
-var inputLength = new KnobInput(divMiscControls.element,
+var inputLength = new NumberInput(divMiscControls.element,
   "Length", 1, 0.02, 16, 0.01, refresh, true)
 var pullDownMenuChannel = new PullDownMenu(divMiscControls.element,
   null, refresh)
@@ -234,18 +234,18 @@ var checkboxResample = new Checkbox(divMiscControls.element, "16x Sampling",
 
 var divEnvGainControls = new Div(divControlLeft.element, "envGainControls")
 var headingEnvGain = new Heading(divEnvGainControls.element, 6, "Gain Envelope")
-var inputFadeIn = new KnobInput(divEnvGainControls.element,
+var inputFadeIn = new NumberInput(divEnvGainControls.element,
   "FadeIn", 0, 0, 100, 0.01, refresh)
-var inputFadeOut = new KnobInput(divEnvGainControls.element,
+var inputFadeOut = new NumberInput(divEnvGainControls.element,
   "FadeOut", 0, 0, 100, 0.01, refresh)
 
 var divHighShelfControls = new Div(divControlLeft.element, "highShelfControls")
 var headingHighShelf = new Heading(divHighShelfControls.element, 6, "HighShelf")
-var inputHighShelfFrequency = new KnobInput(divHighShelfControls.element,
+var inputHighShelfFrequency = new NumberInput(divHighShelfControls.element,
   "Frequency", 1000, 20, 4000, 0.01, refresh, true)
-var inputHighShelfQ = new KnobInput(divHighShelfControls.element,
+var inputHighShelfQ = new NumberInput(divHighShelfControls.element,
   "Q", 0.1, 0.01, 0.5, 0.001, refresh, true)
-var inputHighShelfGain = new KnobInput(divHighShelfControls.element,
+var inputHighShelfGain = new NumberInput(divHighShelfControls.element,
   "Gain", -30, -100, 0, 0.001, refresh, false)
 
 //// ControlRight
@@ -253,37 +253,37 @@ var divControlRight = new Div(divMain.element, "controlRight", "controlBlock")
 
 var divCymbalControls = new Div(divControlRight.element, "cymbalControls")
 var headingCymbal = new Heading(divCymbalControls.element, 6, "Cymbal")
-var inputSeed = new KnobInput(divCymbalControls.element,
+var inputSeed = new NumberInput(divCymbalControls.element,
   "Time.Seed", 0, 0, Math.floor(Number.MAX_SAFE_INTEGER / 2), 1, refresh, false)
-var inputFdnReferenceDelayTime = new KnobInput(divCymbalControls.element,
+var inputFdnReferenceDelayTime = new NumberInput(divCymbalControls.element,
   "FDN.Time", 0.16, 0.0001, 0.2, 0.0001, refresh, true)
-var inputFdnAttackTimeRatio = new KnobInput(divCymbalControls.element,
+var inputFdnAttackTimeRatio = new NumberInput(divCymbalControls.element,
   "Atk.Time", 0.2, 0.0001, 1, 0.0001, refresh, true)
-var inputFdnAttackMix = new KnobInput(divCymbalControls.element,
+var inputFdnAttackMix = new NumberInput(divCymbalControls.element,
   "Atk.Mix", 0.01, 0, 0.1, 0.0001, refresh, true)
-var inputFdnTickTimeRatio = new KnobInput(divCymbalControls.element,
+var inputFdnTickTimeRatio = new NumberInput(divCymbalControls.element,
   "Tick.Time", 0.1, 0.0001, 1, 0.0001, refresh, true)
-var inputFdnTickMix = new KnobInput(divCymbalControls.element,
+var inputFdnTickMix = new NumberInput(divCymbalControls.element,
   "Tick.Mix", 0.2, 0, 1, 0.0001, refresh, true)
-var inputFdnFeedback = new KnobInput(divCymbalControls.element,
+var inputFdnFeedback = new NumberInput(divCymbalControls.element,
   "FDN.Feedback", 0.02, 0, 16, 0.0001, refresh, false)
-var inputFdnCascadeMix = new KnobInput(divCymbalControls.element,
+var inputFdnCascadeMix = new NumberInput(divCymbalControls.element,
   "FDN.Cas.Mix", 0.67, 0, 1, 0.0001, refresh, false)
-var inputDiagPower = new KnobInput(divCymbalControls.element,
+var inputDiagPower = new NumberInput(divCymbalControls.element,
   "Diag.Pow", 4, 0, 32, 0.001, refresh, true)
-var inputNonDiagPower = new KnobInput(divCymbalControls.element,
+var inputNonDiagPower = new NumberInput(divCymbalControls.element,
   "NonDiag.Pow", 2.4, 0, 8, 0.001, refresh, true)
-var inputAllpassFeedback = new KnobInput(divCymbalControls.element,
+var inputAllpassFeedback = new NumberInput(divCymbalControls.element,
   "AP.Feedback", 0.01, 0.0001, 1, 0.0001, refresh, false)
-var inputAllpassMix = new KnobInput(divCymbalControls.element,
+var inputAllpassMix = new NumberInput(divCymbalControls.element,
   "AP.Mix", 2 / 3, 0, 1, 0.001, refresh, false)
-var inputAllpassHighpassFrequency = new KnobInput(divCymbalControls.element,
+var inputAllpassHighpassFrequency = new NumberInput(divCymbalControls.element,
   "AP.HP.Freq", 20, 1, 200, 0.001, refresh, true)
-var inputFdnFilterSeed = new KnobInput(divCymbalControls.element,
+var inputFdnFilterSeed = new NumberInput(divCymbalControls.element,
   "FDN.Flt.Seed", 0, 0, Math.floor(Number.MAX_SAFE_INTEGER / 2), 1, refresh, false)
-var inputFdnMaxFilterGain = new KnobInput(divCymbalControls.element,
+var inputFdnMaxFilterGain = new NumberInput(divCymbalControls.element,
   "FDN.Flt.Gain", 20, -24, 24, 0.0001, refresh, false)
-var inputFdnMaxFilterQ = new KnobInput(divCymbalControls.element,
+var inputFdnMaxFilterQ = new NumberInput(divCymbalControls.element,
   "FDN.Flt.Q", 0.01, 0.01, 0.99, 0.01, refresh, false)
 
 refresh()
