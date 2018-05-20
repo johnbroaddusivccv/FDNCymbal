@@ -8,7 +8,7 @@ Cymbal synthesizer based on feedback delay network.
 
 Input is an impulse.
 
-*.Time on FDN(n) is modified with depth of cascades. In other words, it's not the exact value from FDN.Time, Atk.Time or Tick.Time. Values increases with respect to the depth of cascades.
+*.Time on FDN(n) is modified with respect to the depth of cascades. In other words, it's not the exact value from FDN.Time, Atk.Time or Tick.Time.
 
 Control on summing (⊕, plus symbol with circle) indicates mixing ratio of 2 signals.
 
